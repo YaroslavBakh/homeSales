@@ -1,0 +1,10 @@
+app-map-container {
+  background-color: #f6f7fa;
+  width: 70vw;
+  flex: 1 1;
+
+  .map {
+    width: 100%;
+    height: 100%;
+  }
+}

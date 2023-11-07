@@ -1,4 +1,33 @@
+:host {
+  padding: 50px;
+  display: flex;
+}
+
 section {
   display: flex;
   height: calc(100vh - 75px);
+}
+
+.color-option {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+#shade-slider {
+  width: 200px;
+  margin-top: 20px;
+}
+#color-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: lightblue;
+  height: 200px;
+  width: 200px;
+  box-sizing: border-box;
+  padding: 12px;
 }

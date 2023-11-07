@@ -1,0 +1,16 @@
+<svg focusable="false" height="100%" viewBox="-100 -100 200 200" width="100%" xmlns="http://www.w3.org/2000/svg" class="t-svg">
+  <defs>
+    <mask id="circleMask">
+      <rect fill="white" height="400" width="400" x="-200" y="-200"></rect>
+      <circle cx="0" cy="0" r="80"></circle>
+    </mask>
+  </defs>
+  <g [style.mask]="'url(#circleMask)'">
+    <circle cx="0" cy="0" r="100"></circle>
+    <path [style.color]="'red'" class="pathHover" d="M 100 0 A 100 100 0 0 1 -47.33330543909362 88.08835448689838 L 0 0" fill="currentColor"></path>
+    <path [style.color]="'green'"  class="pathHover" d="M -47.33330543909362 88.08835448689838 A 100 100 0 0 1 -71.37262688950942 -70.04247376335931 L 0 0" fill="currentColor"></path>
+    <path [style.color]="'blue'"  class="pathHover" d="M -71.37262688950942 -70.04247376335931 A 100 100 0 0 1 66.67955169720706 -74.52407252330948 L 0 0" fill="currentColor"></path>
+    <path [style.color]="'yellow'"  class="pathHover" d="M 66.67955169720706 -74.52407252330948 A 100 100 0 0 1 92.54704096413323 -37.88199055993555 L 0 0" fill="currentColor"></path>
+    <path [style.color]="'black'"  class="pathHover" d="M 92.54704096413323 -37.88199055993555 A 100 100 0 0 1 99.99999999984769 -0.00017453292520339833 L 0 0" fill="currentColor"></path>
+  </g>
+</svg>

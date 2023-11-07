@@ -1,0 +1,19 @@
+svg {
+  position: relative;
+  overflow: visible;
+  display: block;
+}
+
+.pathHover {
+  transition-property: all;
+  transition-timing-function: ease;
+  visibility: visible;
+}
+
+.pathHover:hover {
+  transition-property: transform;
+  transition-duration: .35s;
+  transition-timing-function: ease-in-out;
+  transform: scale(1.11, 1.11);
+}
+

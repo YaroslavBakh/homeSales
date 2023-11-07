@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'home-sales';
+  boxClass: string = 'six';
+
+  async workWithFile(event: Event) {
+    //@ts-ignore
+    const data = event.target.files[0];
+
+    // Извлечь данные из PDF-файла
+    const pdfData = new Blob([data], {type: 'application/pdf'});
+    const text = await pdfData.text();
+    console.log(text)
+  }
 }

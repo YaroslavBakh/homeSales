@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/home-sales",
             "index": "src/index.html",
@@ -23,9 +23,6 @@
             "polyfills": [
               "zone.js"
             ],
-            "customWebpackConfig": {
-              "path": "src/angular/custom-build-config.js"
-            },
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [

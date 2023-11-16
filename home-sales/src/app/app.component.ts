@@ -9,6 +9,8 @@ export class AppComponent {
   title = 'home-sales';
   boxClass: string = 'six';
 
+  isButtonClicked: boolean = false;
+
   async workWithFile(event: Event) {
     //@ts-ignore
     const data = event.target.files[0];
@@ -17,5 +19,9 @@ export class AppComponent {
     const pdfData = new Blob([data], {type: 'application/pdf'});
     const text = await pdfData.text();
     console.log(text)
+  }
+
+  changeValue() {
+    this.isButtonClicked = true;
   }
 }

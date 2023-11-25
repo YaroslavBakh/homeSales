@@ -1,10 +1,13 @@
 <div class="box {{styles?.[triangles?.length]}}">
-  <div class="triangle" *ngFor="let item of triangles">
+  @for (item of triangles; track item) {
+  <div class="triangle">
     <span>{{item.text}}</span>
   </div>
+}
 </div>
 <div class="legend">
-  <div class="legend__item" *ngFor="let item of legend">
+  @for (item of legend; track item) {
+  <div class="legend__item">
     <button (click)="showHideLegendItem(item)" [disabled]="triangles.length === 3 && findItemInTriangles(item)">
       <span>✓</span>
       <span>{{item.text}}</span>
@@ -12,4 +15,5 @@
       <span>x</span>
     </button>
   </div>
+}
 </div>

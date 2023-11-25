@@ -9,6 +9,7 @@ import { MapContainerComponent } from './map-container/map-container.component';
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { GeometricFigureComponent } from "./geometric-figure/geometric-figure.component";
 import { TestComponentComponent } from './test-component/test-component.component';
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { TestComponentComponent } from './test-component/test-component.componen
     AppRoutingModule,
     NoopAnimationsModule,
     GeometricFigureComponent,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

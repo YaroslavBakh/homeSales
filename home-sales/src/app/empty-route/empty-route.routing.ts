@@ -6,5 +6,9 @@ export const EMPTY_ROUTES: Route[] = [
   {
     path: '',
     component: EmptyRouteComponent,
+  },
+  {
+    path: ':sportid',
+    component: EmptyRouteComponent,
   }
 ]

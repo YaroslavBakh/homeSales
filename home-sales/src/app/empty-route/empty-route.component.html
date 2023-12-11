@@ -1,13 +1,16 @@
-<br>
 <div>
-  @for (block of blocks(); track block.test) {
-  <div> {{block.test}} </div>
-  }
+  <button (click)="isBlockShown.set(true)">click me</button>
 </div>
-<p>
-  @if (isBlockShown()) {
-  <div>block</div>
-  }
-</p>
-{{isBlockShown() | json}}
-<button (click)="handleClick()">aaaa</button>
+<br>
+<div #greeting>greeting text</div>
+
+@defer(when isBlockShown()) {
+<br>
+<app-pie-chart/>
+}
+@defer(on hover(greeting)) {
+  <div>defer text</div>
+} @placeholder {
+  <div>placeholder text</div>
+}
+{{sportid}}

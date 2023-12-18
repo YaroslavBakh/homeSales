@@ -26,9 +26,6 @@ export class EmptyRouteComponent implements OnInit {
     private emptyRouteService: EmptyRouteService,
   ) {
   }
-  userStatus: 'red' | 'yellow' | 'green' = 'red'
-  isBlockShown: WritableSignal<boolean> = signal(null);
-  blocks = signal([{test: 1}, {test: 2}, {test: 3}, {test: 4}])
 
 ngOnInit() {
 

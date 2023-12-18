@@ -3,13 +3,13 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { TestComponentComponent } from "../test-component/test-component.component";
 import { PieChartComponent } from "../pie-chart/pie-chart.component";
 import { EmptyRouteService } from "./empty-route.service";
-import { HttpClient, HttpClientModule, HttpHandler } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
+import {ParentComponent} from "../parent/parent.component";
 
 @Component({
   selector: 'app-empty-route',
   standalone: true,
-  imports: [CommonModule, TestComponentComponent, PieChartComponent, NgOptimizedImage],
+  imports: [CommonModule, TestComponentComponent, PieChartComponent, NgOptimizedImage, ParentComponent],
   templateUrl: './empty-route.component.html',
   styleUrls: ['./empty-route.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -34,7 +34,4 @@ ngOnInit() {
 
 }
 
-// handleClick() {
-//   this.isBlockShown.update(prev => !prev);
-// }
 }

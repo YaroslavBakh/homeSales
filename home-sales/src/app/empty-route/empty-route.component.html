@@ -1,16 +1,17 @@
-<div>
-  <button (click)="isBlockShown.set(true)">click me</button>
-</div>
-<br>
-<div #greeting>greeting text</div>
+<!--<div>-->
+<!--  <button (click)="isBlockShown.set(true)">click me</button>-->
+<!--</div>-->
+<!--<br>-->
+<!--<div #greeting>greeting text</div>-->
 
-@defer(when isBlockShown()) {
-<br>
-<app-pie-chart/>
-}
-@defer(on hover(greeting)) {
-  <div>defer text</div>
-} @placeholder {
-  <div>placeholder text</div>
-}
-{{sportid}}
+<!--@defer(when isBlockShown()) {-->
+<!--<br>-->
+<!--<app-pie-chart/>-->
+<!--}-->
+<!--@defer(on hover(greeting)) {-->
+<!--  <div>defer text</div>-->
+<!--} @placeholder {-->
+<!--  <div>placeholder text</div>-->
+<!--}-->
+<!--{{sportid}}-->
+<app-parent></app-parent>

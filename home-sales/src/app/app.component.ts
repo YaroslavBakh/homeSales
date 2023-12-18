@@ -1,28 +1,31 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component, signal, effect} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   title = 'home-sales';
-  boxClass: string = 'six';
+  isDarkTheme = signal(false);
+  counter = signal(0)
 
-  isButtonClicked: boolean = false;
+ constructor() {
+   const darkThemeEffect = effect(() => {
+     console.log('isDarkTheme', this.isDarkTheme());
+   });
 
-  async workWithFile(event: Event) {
-    //@ts-ignore
-    const data = event.target.files[0];
+   const counterEffect = effect(() => {
+     console.log(this.counter())
+   })
+ }
 
-    // Извлечь данные из PDF-файла
-    const pdfData = new Blob([data], {type: 'application/pdf'});
-    const text = await pdfData.text();
-    console.log(text)
+  increaseCounter() {
+    this.counter.set(2)
+    // this.counter.update((counter) => counter + 1)
   }
 
-  changeValue() {
-    this.isButtonClicked = true;
+  changeTheme() {
+    this.isDarkTheme.update((isDarkTheme) => !isDarkTheme);
   }
 }

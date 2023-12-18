@@ -1,0 +1,31 @@
+:host {
+  width: 100%;
+}
+.box {
+  border: 1px solid black;
+  width: 100px;
+  height: 150px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin: auto;
+  text-align: center;
+  padding-top: 4px;
+  border-radius: 8px;
+}
+
+.child-components {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: none;
+}

@@ -10,6 +10,7 @@ import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { GeometricFigureComponent } from "./geometric-figure/geometric-figure.component";
 import { TestComponentComponent } from './test-component/test-component.component';
 import { RouterModule } from "@angular/router";
+import {ParentComponent} from "./parent/parent.component";
 
 @NgModule({
   declarations: [
@@ -18,13 +19,14 @@ import { RouterModule } from "@angular/router";
     HeaderComponent,
     MapContainerComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NoopAnimationsModule,
-    GeometricFigureComponent,
-    RouterModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NoopAnimationsModule,
+        GeometricFigureComponent,
+        RouterModule,
+        ParentComponent
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

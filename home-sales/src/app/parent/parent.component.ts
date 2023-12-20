@@ -14,6 +14,8 @@ import {ChildTwoComponent} from "../child-two/child-two.component";
   template: `
     <div class="box" [style.background]="getBackgroundColor()">
         Parent
+        <button (click)="increaseCounterObs()">increase OBs</button>
+        <button (click)="increaseCounterSignal()">increase Signal</button>
     </div>
     <div class="child-components">
         <app-child-one></app-child-one>
@@ -21,6 +23,7 @@ import {ChildTwoComponent} from "../child-two/child-two.component";
     </div>
   `,
   styleUrl: './parent.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ParentComponent {
 
@@ -32,4 +35,11 @@ export class ParentComponent {
   }
 
 
+  increaseCounterObs() {
+    this.stateService.increaseObsCounter();
+  }
+
+  increaseCounterSignal() {
+    this.stateService.increaseSignalCounter();
+  }
 }

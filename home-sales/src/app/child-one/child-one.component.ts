@@ -17,6 +17,7 @@ import {GrandChildComponent} from "../grand-child/grand-child.component";
     <app-grand-child></app-grand-child>
   `,
   styleUrl: './child-one.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChildOneComponent {
 

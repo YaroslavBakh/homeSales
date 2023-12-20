@@ -1,4 +1,13 @@
-import {ChangeDetectionStrategy, Component, signal, effect} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  signal,
+  effect,
+  Injector,
+  OnInit,
+  WritableSignal,
+  computed, untracked
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +17,12 @@ import {ChangeDetectionStrategy, Component, signal, effect} from '@angular/core'
 export class AppComponent {
   title = 'home-sales';
 
- constructor() {
+  roleId = signal(0);
+  isAdmin = computed(() => [2,3,4].includes(this.roleId()))
 
- }
+
+  constructor(private injector: Injector) {}
+
+
 
 }

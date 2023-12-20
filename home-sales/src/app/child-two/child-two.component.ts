@@ -12,6 +12,7 @@ import {StateService} from "../state.service";
     </div>
   `,
   styleUrl: './child-two.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChildTwoComponent {
 
